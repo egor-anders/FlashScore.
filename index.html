@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <title>Flashscore.com</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="info">
+      <div class="info__wrapper container">
+        <h1 class="info__title">
+          F1, MotoGP - live results
+        </h1>
+      </div>
+    </div>
+
+    <div class="header__middle">
+      <div class="header__wrapper container">
+        <a class="header__logo" href="#"><img src="/assets/img/logo.svg" alt=""></a>
+        <div class="header__buttons">
+          <div class="header__button header__button--search">
+            <div class="header__icon header__icon--search"><svg>
+                <title></title>
+                <use xlink:href="/assets/icons-sport.svg#search"></use>
+              </svg></div>
+          </div>
+          <div class="header__button header__button--login">
+            <div class="header__icon header__icon--login"><svg>
+                <title></title>
+                <use xlink:href="/assets/icons-sport.svg#user"></use>
+              </svg></div>
+            <p class="header__text">login</p>
+          </div>
+
+          <div class="header__button header__button--login header__button--mobile ">
+            <div class="header__icon header__icon--login"><svg>
+                <title></title>
+                <use xlink:href="/assets/icons-sport.svg#user"></use>
+              </svg></div>
+            <p class="header__text"></p>
+          </div>
+          <div class="header__button header__button--burger">
+            <div class="header__icon header__icon--burger"><svg>
+                <title></title>
+                <use xlink:href="/assets/icons-sport.svg#menu"></use>
+              </svg></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__bottom">
+      <div class="header__wrapper header__wrapper--category container">
+        <div class="categories">
+          <a class="category" href="#">
+            <h2 class="category__name category__name--favorites">favorites <span class="category__counter">0</span></h2>
+          </a>
+
+          <a class="category" href="#">
+            <h2 class="category__name category__name--soccer">soccer</h2>
+          </a>
+
+          <a class="category category--basket" href="#">
+            <h2 class="category__name category__name--basket">Basketball</h2>
+          </a>
+
+          <a class="category category--tennis" href="#">
+            <h2 class="category__name category__name--tennis">Tennis</h2>
+          </a>
+
+          <a class="category category--hockey" href="#">
+            <h2 class="category__name category__name--hockey">Ice hockey</h2>
+          </a>
+
+          <a class="category category--hand" href="#">
+            <h2 class="category__name category__name--hand">Handball</h2>
+          </a>
+
+          <a class="category category--volleyball" href="#">
+            <h2 class="category__name category__name--volleyball">Volleyball</h2>
+          </a>
+        </div>
+
+        <div class="header__more" id="menuBtn">
+          <p class="header__menu-btn active">more</p>
+        </div>
+
+        <div class="menu">
+          <ul class="menu__list">
+            <div class="menu__left">
+              <li><a href="#" class="menu__item menu__item--football"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#american-football"></use>
+                  </svg> am, football</a></li>
+              <li><a href="#" class="menu__item menu__item--aussie"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#aussie-rules"></use>
+                  </svg> Aussie rules</a></li>
+              <li><a href="#" class="menu__item menu__item--badminton"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#badminton"></use>
+                  </svg> Badminton <span class="menu__counter">86</span></a></li>
+              <li><a href="#" class="menu__item menu__item--bandy"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#bandy"></use>
+                  </svg> Bandy</a></li>
+              <li><a href="#" class="menu__item menu__item--baseball"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#baseball"></use>
+                  </svg> Baseball <span class="menu__counter">20</span></a></li>
+              <li><a href="#" class="menu__item menu__item--soccer"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#beach-soccer"></use>
+                  </svg> Beach soccer</a></li>
+              <li><a href="#" class="menu__item menu__item--volleyball"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#beach-volleyball"></use>
+                  </svg> Beach volleyball</a></li>
+              <li><a href="#" class="menu__item menu__item--boxing"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#boxing"></use>
+                  </svg> Boxing <span class="menu__counter">1</span></a></li>
+              <li><a href="#" class="menu__item menu__item--cricket"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#cricket"></use>
+                  </svg> cricket <span class="menu__counter">11</span></a></li>
+              <li><a href="#" class="menu__item menu__item--cycling"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#cycling"></use>
+                  </svg> Cycling <span class="menu__counter">1</span></a></li>
+              <li><a href="#" class="menu__item menu__item--hk"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#hockey"></use>
+                  </svg> hockey <span class="menu__counter">1</span></a></li>
+            </div>
+            <div class="menu__middle">
+              <li><a href="#" class="menu__item menu__item--darts"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#darts"></use>
+                  </svg> darts <span class="menu__counter">19</span></a></li>
+              <li><a href="#" class="menu__item menu__item--esports"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#esports"></use>
+                  </svg> Esports <span class="menu__counter">24</span></a></li>
+              <li><a href="#" class="menu__item menu__item--hockey"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#field-hockey"></use>
+                  </svg> Field hockey</a></li>
+              <li><a href="#" class="menu__item menu__item--floorball"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#floorball"></use>
+                  </svg> Floorball</a></li>
+              <li><a href="#" class="menu__item menu__item--footsal"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#futsal"></use>
+                  </svg> Footsal <span class="menu__counter">1</span></a></li>
+              <li><a href="#" class="menu__item menu__item--golf"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#golf"></use>
+                  </svg> Golf</a></li>
+              <li><a href="#" class="menu__item menu__item--horse"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#horse-racing"></use>
+                  </svg> Horse racing <span class="menu__counter">164</span></a></li>
+              <li><a href="#" class="menu__item menu__item--kabaddi"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#kabaddi"></use>
+                  </svg> kabaddi</a></li>
+              <li><a href="#" class="menu__item menu__item--mma"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#mma"></use>
+                  </svg> Mma</a></li>
+              <li><a href="#" class="menu__item menu__item--motor"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#motorsport"></use>
+                  </svg> Motorsport <span class="menu__counter">1</span></a></li>
+            </div>
+
+            <div class="menu__right">
+              <li><a href="#" class="menu__item menu__item--netball"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#netball"></use>
+                  </svg> Netball</a></li>
+              <li><a href="#" class="menu__item menu__item--pes"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#pesapallo"></use>
+                  </svg> pesäpallo <span class="menu__counter">9</span></a></li>
+              <li><a href="#" class="menu__item menu__item--rugby-league"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#rugby-league"></use>
+                  </svg> rugby league</a></li>
+              <li><a href="#" class="menu__item menu__item--rugby-union"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#rugby-union"></use>
+                  </svg> Rugby union</a></li>
+              <li><a href="#" class="menu__item menu__item--snooker"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#snooker"></use>
+                  </svg> snooker <span class="menu__counter">12</span></a></li>
+              <li><a href="#" class="menu__item menu__item--table"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#table-tennis"></use>
+                  </svg>Table tennis <span class="menu__counter">935</span></a></li>
+              <li><a href="#" class="menu__item menu__item--water"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#water-polo"></use>
+                  </svg> Water polo</a></li>
+              <li><a href="#" class="menu__item menu__item--winter"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#winter-sports"></use>
+                  </svg> winter sports</a></li>
+              <li><a href="#" class="menu__item menu__item--vb"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#volleyball"></use>
+                  </svg> volleyball</a></li>
+              <li><a href="#" class="menu__item menu__item--hand"><svg>
+                    <title></title>
+                    <use xlink:href="/assets/icons-actions.svg#handball"></use>
+                  </svg> handball</a></li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+  </header>
+
+  <main class="core">
+    <div class="core__wrapper">
+      <aside class="left">
+        <div class="left__block">
+          <h2 class="left__title left__title--personal">my leagues</h2>
+          <ul class="left__list">
+
+            <li>
+              <a href="#" class="left__item left__item--country left__item--eng">Premier League</a>
+            </li>
+
+            <li>
+              <a href="#" class="left__item left__item--country left__item--fr">Ligue 1</a>
+            </li>
+
+            <li>
+              <a href="#" class="left__item left__item--country left__item--ger">Bundesliga</a>
+            </li>
+
+            <li>
+              <a href="#" class="left__item left__item--country left__item--it">Serie A</a>
+            </li>
+
+            <li>
+              <a href="#" class="left__item left__item--country left__item--net">Eredivisie</a>
+            </li>
+
+            <li>
+              <a href="#" class="left__item left__item--country left__item--nig">NPFL</a>
+            </li>
+
+            <li>
+              <a href="#" class="left__item left__item--country left__item--sp">LaLiga</a>
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="left__block">
+          <h2 class="left__title left__title--personal">my teams</h2>
+          <div class="left__button">add the team</div>
+        </div>
+
+        <div class="left__block">
+          <h2 class="left__title">Current Races</h2>
+          <ul class="left__list">
+            <li><a href="#" class="left__item">France Grand Prix</a></li>
+            <li><a href="#" class="left__item">Le Castellet</a></li>
+            <li><a href="#" class="left__item">Elitserien</a></li>
+            <li><a href="#" class="left__item">The Championship</a></li>
+            <li><a href="#" class="left__item">The Premiership</a></li>
+          </ul>
+        </div>
+
+        <div class="left__block">
+          <h2 class="left__title">Auto Racing</h2>
+          <ul class="left__list">
+            <li><a href="#" class="left__item">Formula 1</a></li>
+            <li><a href="#" class="left__item">WRC</a></li>
+            <li><a href="#" class="left__item">WEC</a></li>
+            <li><a href="#" class="left__item">WTCR</a></li>
+            <li><a href="#" class="left__item">DTM</a></li>
+            <li><a href="#" class="left__item">Formula E</a></li>
+            <li><a href="#" class="left__item">Formula 2</a></li>
+            <li><a href="#" class="left__item">IndyCar</a></li>
+            <li><a href="#" class="left__item">Nascar Cup Series</a></li>
+            <li><a href="#" class="left__item">Nascar Xfinity Series</a></li>
+            <li><a href="#" class="left__item">Nascar Trucks</a></li>
+            <li><a href="#" class="left__item">Truck Racing</a></li>
+            <li><a href="#" class="left__item">Dakar</a></li>
+            <li><a href="#" class="left__item">Supercars Championship</a></li>
+            <li><a href="#" class="left__item">Rallycross</a></li>
+            <li><a href="#" class="left__item">Formula 3</a></li>
+
+
+
+          </ul>
+        </div>
+
+      </aside>
+
+      <section class="middle">
+        <div class="banner__wrapper banner__wrapper--sticky">
+          <div class="banner">
+            <div class="banner__content">
+              <div class="banner__logo"><img src="/assets/img/banner.png" alt=""></div>
+              <div class="banner__logo banner__logo--sm"><img src="/assets/img/banner-sm.png" alt=""></div>
+              <div class="banner__logo banner__logo--xs"><img src="/assets/img/banner-xs.png" alt=""></div>
+              <a href="#" class="banner__link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="middle__content">
+          <h3 class="middle__title middle__title--motor">Motorsport</h3>
+          <div class="middle__buttons">
+            <div class="middle__button">16.07</div>
+            <div class="middle__button">17.07</div>
+            <div class="middle__button">18.07</div>
+            <div class="middle__button middle__button--active">today</div>
+            <div class="middle__button">20.07</div>
+          </div>
+          <div class="middle__table">
+            <div class="middle__headers">
+              <div></div>
+              <h2 class="middle__header middle__header--home">Home - Away</h2>
+              <h2 class="middle__header middle__header--tips">Tips</h2>
+              <h2 class="middle__header middle__header--odds">Odds</h2>
+              <h2 class="middle__header middle__header--results">Results</h2>
+            </div>
+
+
+            <!-- убрать класс middle__block--active, чтобы таблица была закрыта при обновлении страницы -->
+            <div class="middle__block middle__block--active">
+
+              <h3 class="middle__name middle__name--count1">
+                Brazilia: LBF - woman play off
+                <div class="middle__name-arrow"></div>
+              </h3>
+              <div class="middle__string">
+                <div class="middle__item middle__item--time">01:30</div>
+                <div class="middle__item middle__item--name">Sesi Sao Paulo W - Wera Kruz W</div>
+                <div class="middle__item middle__item--tips">U140.5</div>
+                <div class="middle__item middle__item--odds">1.77</div>
+                <div class="middle__item middle__item--results middle__item--active">62 - 70</div>
+              </div>
+            </div>
+
+            <div class="middle__block middle__block--active">
+              <h3 class="middle__name middle__name--count2">
+                Brazilia: LBF - woman play off
+                <div class="middle__name-arrow"></div>
+              </h3>
+              <div class="middle__string">
+                <div class="middle__item middle__item--time">01:30</div>
+                <div class="middle__item middle__item--name">Sesi Sao Paulo W - Wera Kruz W</div>
+                <div class="middle__item middle__item--tips">U140.5</div>
+                <div class="middle__item middle__item--odds">1.77</div>
+                <div class="middle__item middle__item--results">100 - 100</div>
+              </div>
+              <div class="middle__string">
+                <div class="middle__item middle__item--time">01:30</div>
+                <div class="middle__item middle__item--name">Sesi Sao Paulo W - Wera Kruz W</div>
+                <div class="middle__item middle__item--tips">U140.5</div>
+                <div class="middle__item middle__item--odds">1.77</div>
+                <div class="middle__item middle__item--results">62 - 70</div>
+              </div>
+              <div class="middle__string">
+                <div class="middle__item middle__item--time">01:30</div>
+                <div class="middle__item middle__item--name">Sesi Sao Paulo W - Wera Kruz W</div>
+                <div class="middle__item middle__item--tips">U140.5</div>
+                <div class="middle__item middle__item--odds">1.77</div>
+                <div class="middle__item middle__item--results">62 - 70</div>
+              </div>
+            </div>
+
+            <div class="middle__block middle__block--active">
+              <h3 class="middle__name middle__name--count3">
+                Brazilia: LBF - woman play off
+                <div class="middle__name-arrow"></div>
+              </h3>
+              <div class="middle__string">
+                <div class="middle__item middle__item--time">01:30</div>
+                <div class="middle__item middle__item--name">Sesi Sao Paulo W - Wera Kruz W</div>
+                <div class="middle__item middle__item--tips">U140.5</div>
+                <div class="middle__item middle__item--odds">1.77</div>
+                <div class="middle__item middle__item--results">62 - 70</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="banner__wrapper banner__wrapper--mobile">
+          <div class="banner banner--mobile">
+            <div class="banner__content">
+              <div class="banner__logo"><img src="/assets/img/banner.png" alt=""></div>
+              <div class="banner__logo banner__logo--sm"><img src="/assets/img/banner-sm.png" alt=""></div>
+              <div class="banner__logo banner__logo--xs"><img src="/assets/img/banner-xs.png" alt=""></div>
+              <a href="#" class="banner__link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="middle__advertisement">
+          <a class="middle__picture" href="#"><img src="/assets/img/xbet-big.png" alt=""></a>
+          <span>Advertisement</span>
+        </div>
+
+        <div class="middle__info middle__info--desk">
+          <p class="middle__text">Soccer live scores page on&nbsp;FlashScore.com.ng offers all the latest soccer results from <a href="#" class="underline">AWCON 2022</a> and more than 1000+ soccer
+            leagues and tournaments all around
+            the world including the most famous <a href="#" class="underline">Premier League</a>, <a href="#" class="underline">LaLiga</a>, <a href="#" class="underline">Serie A</a>, <a href="#"
+              class="underline">Champions League</a>, <a href="#" class="underline">NPFL</a> and also other leagues such as&nbsp;Chinese Super League or&nbsp;Egypt Premier League. Follow
+            all the latest soccer results on&nbsp;FlashScore.com.ng where you can find previews of&nbsp;the soccer matches, detailed statistics (shots on&nbsp;goal, ball possesion, corner stats,
+            yellow and red cards, fouls etc.), odds comparison, H2H, lineups, live commentary, match report, transfers, news or&nbsp;video highlights. In&nbsp;addition to&nbsp;soccer you can also
+            follow more than 30+&nbsp;sports (<a href="#" class="underline">tennis live</a>, <a href="#" class="underline">basketball scores</a>, <a href="#" class="underline">hockey
+              results</a>&nbsp;&mdash; complete list of&nbsp;sports can be&nbsp;found in&nbsp;the <a href="#" class="underline">Live scores</a> section). Find all
+            today&rsquo;s/tonight&rsquo;s soccer scores on&nbsp;FlashScore.com.ng. The soccer livescore service is&nbsp;real time, you don&rsquo;t need to&nbsp;refresh&nbsp;it.</p>
+          <p class="middle__text"><strong>NPFL live</strong> on&nbsp;Flashscore.com.ng! 17.07. Abia Warriors&nbsp;&mdash; Lobi Stars, Dakkada FC&nbsp;&mdash; Sunshine Stars, Enugu
+            Rangers&nbsp;&mdash;
+            Akwa United, Heartland&nbsp;&mdash; Kwara United, Kano Pillars&nbsp;&mdash; Shooting, MFM FC&nbsp;&mdash; Nasarawa United, Plateau United&nbsp;&mdash; Enyimba, Remo Stars&nbsp;&mdash;
+            Niger Tornadoes, Rivers United&nbsp;&mdash; Gombe, Wikki Tourist&nbsp;&mdash; Katsina Utd. Nigerian professional Football League live scores, <a href="#" class="underline">latest
+              results</a>, <a href="#" class="underline">fixtures</a>, <a href="#" class="underline">NPFL standings</a> and
+            team pages (e.g.<a href="#" class="underline"> Rivers United</a>, FC <a href="#" class="underline">Shooting Stars</a>).</p>
+          <p class="middle__text"><strong>AWCON 2022 live&nbsp;</strong>on Flashscore.com.ng! Follow Africa Women’s Cup of Nations 2022 live scores, <a href="#" class="underline">results</a>, <a
+              href="#" class="underline">fixtures</a> and <a href="#" class="underline">standings</a>.</p>
+        </div>
+      </section>
+
+      <div class="middle__info middle__info--mob">
+        <a href="#" class="middle__info-show-more" id="showMore">Show more</a>
+        <p class="middle__text">Soccer live scores page on&nbsp;FlashScore.com.ng offers all the latest soccer results from <a href="#" class="underline">AWCON 2022</a> and more than 1000+ soccer
+          leagues and tournaments all around
+          the world including the most famous <a href="#" class="underline">Premier League</a>, <a href="#" class="underline">LaLiga</a>, <a href="#" class="underline">Serie A</a>, <a href="#"
+            class="underline">Champions League</a>, <a href="#" class="underline">NPFL</a> and also other leagues such as&nbsp;Chinese Super League or&nbsp;Egypt Premier League. Follow
+          all the latest soccer results on&nbsp;FlashScore.com.ng where you can find previews of&nbsp;the soccer matches, detailed statistics (shots on&nbsp;goal, ball possesion, corner stats,
+          yellow and red cards, fouls etc.), odds comparison, H2H, lineups, live commentary, match report, transfers, news or&nbsp;video highlights. In&nbsp;addition to&nbsp;soccer you can also
+          follow more than 30+&nbsp;sports (<a href="#" class="underline">tennis live</a>, <a href="#" class="underline">basketball scores</a>, <a href="#" class="underline">hockey
+            results</a>&nbsp;&mdash; complete list of&nbsp;sports can be&nbsp;found in&nbsp;the <a href="#" class="underline">Live scores</a> section). Find all
+          today&rsquo;s/tonight&rsquo;s soccer scores on&nbsp;FlashScore.com.ng. The soccer livescore service is&nbsp;real time, you don&rsquo;t need to&nbsp;refresh&nbsp;it.</p>
+        <p class="middle__text"><strong>NPFL live</strong> on&nbsp;Flashscore.com.ng! 17.07. Abia Warriors&nbsp;&mdash; Lobi Stars, Dakkada FC&nbsp;&mdash; Sunshine Stars, Enugu Rangers&nbsp;&mdash;
+          Akwa United, Heartland&nbsp;&mdash; Kwara United, Kano Pillars&nbsp;&mdash; Shooting, MFM FC&nbsp;&mdash; Nasarawa United, Plateau United&nbsp;&mdash; Enyimba, Remo Stars&nbsp;&mdash;
+          Niger Tornadoes, Rivers United&nbsp;&mdash; Gombe, Wikki Tourist&nbsp;&mdash; Katsina Utd. Nigerian professional Football League live scores, <a href="#" class="underline">latest
+            results</a>, <a href="#" class="underline">fixtures</a>, <a href="#" class="underline">NPFL standings</a> and
+          team pages (e.g.<a href="#" class="underline"> Rivers United</a>, FC <a href="#" class="underline">Shooting Stars</a>).</p>
+        <p class="middle__text"><strong>AWCON 2022 live&nbsp;</strong>on Flashscore.com.ng! Follow Africa Women’s Cup of Nations 2022 live scores, <a href="#" class="underline">results</a>, <a
+            href="#" class="underline">fixtures</a> and <a href="#" class="underline">standings</a>.</p>
+      </div>
+
+      <section class="right">
+        <div class="right__advertisement">
+          <a class="right__picture" href="#"><img src="/assets/img/xbet-long.png" alt=""></a>
+          <span>Advertisement</span>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <div class="footer__content-top container">
+        <div class="footer__middle">
+          <div class="footer__section footer__section--1">
+            <h2 class="footer__title">Flashscore.com.ng</h2>
+            <div class="footer__container">
+              <ul class="footer__list footer__list--1">
+                <li class="footer__item footer__item--1"><a href="#">Terms of Use</a></li>
+                <li class="footer__item footer__item--1"><a href="#">Advertise</a></li>
+                <li class="footer__item footer__item--2"><a href="#">Contact</a></li>
+                <li class="footer__item footer__item--2"><a href="#">Mobile</a></li>
+              </ul>
+
+              <ul class="footer__list footer__list--2">
+                <li class="footer__item"><a href="#">Live Scores</a></li>
+                <li class="footer__item footer__item--4"><a href="#">Recommended Sites</a></li>
+                <li class="footer__item footer__item--5"><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer__section--2">
+            <ul class="footer__list footer__list--3">
+              <h2 class="footer__title">Follow us</h2>
+              <li class="footer__item footer__item--6 footer__item--twitter"><a href="#">Twitter</a></li>
+              <li class="footer__item footer__item--6 footer__item--inst"><a href="#">Instagram</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__section--3">
+            <h2 class="footer__title">Mobile applications</h2>
+            <div class="footer__links">
+              <h3 class="footer__message">Our mobile app is optimized for your phone. Download <br class="mobile-br"> it for free!</h3>
+              <a href="#" class="footer__link footer__link--apple footer__link--desk"><img src="/assets/img/apple.svg" alt=""></a>
+              <a href="#" class="footer__link footer__link--google footer__link--desk"><img src="/assets/img/google.svg" alt=""></a>
+              <a href="#" class="footer__link footer__link--app footer__link--desk"><img src="/assets/img/app.svg" alt=""></a>
+              <a href="#" class="footer__link footer__link--apple footer__link--mob"><img src="/assets/img/apple-mob.svg" alt=""></a>
+              <a href="#" class="footer__link footer__link--google footer__link--mob"><img src="/assets/img/google-mob.svg" alt=""></a>
+              <a href="#" class="footer__link footer__link--app footer__link--mob"><img src="/assets/img/app-mob.svg" alt=""></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer__content-bot container">
+      <a href="" class="footer__lite footer__bottom-text">Lite version</a>
+      <div class="footer__info">
+        <p class="footer__bottom-text footer__bg">The background image is an advertisement.</p>
+        <p class="footer__bottom-text footer__gambling">Gamble Responsibly. Gambling Therapy. 18+</p>
+        <p class="footer__bottom-text footer__copyright">Copyright © 2017-22 Flashscore.com.ng <a href="#" class="footer__bottom-link">Set privacy</a></p>
+      </div>
+    </div>
+
+    <div class="footer__decoration">
+      <div class="footer__phone"><img src="/assets/img/phone.png" alt=""></div>
+      <div class="footer__block"></div>
+    </div>
+
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

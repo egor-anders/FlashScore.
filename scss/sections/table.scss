@@ -1,0 +1,253 @@
+.table {
+  &__wrapper {
+    box-sizing: border-box;
+    max-width: $container-content;
+    margin: 0 auto;
+    padding: 0 12px;
+    background-color: #FFFFFF;
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__header {
+    a {
+      color: $color-menu;
+      font-weight: 700;
+      font-size: 11px;
+      line-height: 16px;
+      text-transform: uppercase;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__string {
+    position: relative;
+    display: grid;
+    grid-template-columns: 72px 75px 1fr max-content 20px;
+    justify-content: space-between;
+    align-items: center;
+    height: 34px;
+    padding: 0 12px 0 14px;
+    border-bottom: 1px solid #D1D1D1;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    @media (max-width: $breakpoint-mobile) {
+      grid-template-columns: 43px 58px 1fr max-content 20px;
+      height: 44px;
+      padding: 0 8px;
+    }
+
+    &:hover,
+    &--active {
+      background-color: #F4F5F5;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__date {
+    color: $color-menu;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+
+    &--desktop {
+      @media (max-width: $breakpoint-mobile) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      @media (min-width: $breakpoint-mobile) {
+        display: none;
+      }
+    }
+  }
+
+  &__country {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__flag {
+    display: flex;
+    width: 18px;
+    height: 12px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__league {
+    position: relative;
+    z-index: 3;
+    color: $color-main;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__teams {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+      align-items: start;
+      gap: 0;
+    }
+  }
+
+  &__team {
+    display: block;
+    padding: 1px 5px;
+    color: $color-main;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+
+    &--win {
+      font-weight: 700;
+    }
+
+    &--blue {
+      background: #EEF7FF;
+      border-radius: 4px;
+    }
+  }
+
+  &__info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 83px;
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 34px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    @media (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  &__score {
+    display: block;
+    color: $color-main;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  &__result {
+    justify-self: end;
+    width: 20px;
+    height: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__extra {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__sidescore {
+    color: $color-main;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+  &__separator {
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+  &__aot {
+    position: absolute;
+    top: 50%;
+    left: -21px;
+    color: $color-menu;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translateY(-50%);
+
+    @media (min-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+  &__block {
+    padding-bottom: 20px;
+
+    &--mod .table__string {
+      @media (max-width: $breakpoint-mobile) {
+        grid-template-columns: 43px 58px 1fr max-content;
+      }
+    }
+
+    &--mod .table__info {
+      @media (max-width: $breakpoint-mobile) {
+        justify-content: end;
+        width: auto;
+      }
+    }
+
+    &--mod .table__aot {
+      @media (max-width: $breakpoint-mobile) {
+        left: -27px;
+      }
+    }
+  }
+}

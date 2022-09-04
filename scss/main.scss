@@ -1,0 +1,146 @@
+@import 'vendor/normalize.scss';
+@import 'variables.scss';
+@import 'sections/header.scss';
+@import 'sections/core.scss';
+@import 'sections/left.scss';
+@import 'sections/middle.scss';
+@import 'sections/right.scss';
+@import 'sections/footer.scss';
+@import 'sections/content-header.scss';
+@import 'sections/match.scss';
+@import 'sections/content.scss';
+@import 'sections/table.scss';
+@import 'sections/odds.scss';
+@import 'sections/offers.scss';
+@import 'sections/content-footer.scss';
+
+
+@font-face {
+  font-weight: 400;
+  font-family: 'TRYFinder';
+  src: url('../../assets/fonts/TRYFinder-Regular.ttf');
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: 'TRYFinder';
+  src: url('../../assets/fonts/TRYFinder-Bold.ttf');
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: 'TRYFinder';
+  src: url('../../assets/fonts/TRYFinder-Light.ttf');
+}
+
+@font-face {
+  font-weight: 100;
+  font-family: 'TRYFinder';
+  src: url('../../assets/fonts/TRYFinderVariable.ttf');
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: 'Tomorrow';
+  src: url('../../assets/fonts/Tomorrow-Medium.ttf');
+}
+
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: $color-main;
+  font-weight: 400;
+  font-family: 'TRYFinder', sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.container {
+  box-sizing: border-box;
+  width: $container-desk;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
+
+
+  @media (max-width: $breakpoint-xl) {
+    width: 100%;
+  }
+
+  @media (max-width: 670px) {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  // @media (max-width: $breakpoint-sm) {
+  //   padding: 0 20px;
+  // }
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+a {
+  color: $color-main;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+
+.content-body {
+  position: relative;
+  overflow-x: visible;
+  background-color: #EEEEEE;
+}
+
+.content-container {
+  box-sizing: border-box;
+  width: $container-content;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 14px;
+  padding-left: 14px;
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+}
+
+.title {
+  padding: 6px 12px;
+  color: $color-menu;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 16px;
+  text-transform: uppercase;
+  background-color: #EEEEEE;
+  border-radius: 4px;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 6px 8px;
+    border-radius: 0;
+  }
+}
