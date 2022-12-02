@@ -34,10 +34,10 @@
   &__string {
     position: relative;
     display: grid;
-    grid-template-columns: 72px 75px 1fr max-content 20px;
+    grid-template-columns: 72px 63px 1fr max-content 20px;
     justify-content: space-between;
     align-items: center;
-    height: 34px;
+    min-height: 47px;
     padding: 0 12px 0 14px;
     border-bottom: 1px solid #D1D1D1;
     cursor: pointer;
@@ -45,13 +45,17 @@
 
     @media (max-width: $breakpoint-mobile) {
       grid-template-columns: 43px 58px 1fr max-content 20px;
-      height: 44px;
+      height: 50px;
       padding: 0 8px;
     }
 
     &:hover,
     &--active {
       background-color: #F4F5F5;
+    }
+
+    &--hide {
+      display: none;
     }
   }
 
@@ -116,13 +120,9 @@
 
   &__teams {
     display: flex;
-    align-items: center;
-
-    @media (max-width: $breakpoint-mobile) {
-      flex-direction: column;
-      align-items: start;
-      gap: 0;
-    }
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
   }
 
   &__team {
@@ -143,18 +143,93 @@
     }
   }
 
-  &__info {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 83px;
+  &__button {
+    margin-top: 13px;
+    color: #555E61;
+    font-weight: 700;
+    font-size: 11px;
+    font-family: 'Arial', sans-serif;
+    font-style: normal;
+    line-height: 16px;
+    text-align: center;
+    text-decoration-line: underline;
 
-    @media (max-width: $breakpoint-mobile) {
-      width: 34px;
+    span {
+      position: relative;
+      cursor: pointer;
     }
   }
+
+  &__more {
+    &::after {
+      position: absolute;
+      top: 2px;
+      right: -16px;
+      width: 12px;
+      height: 7px;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.99994 4.31186L2.16358 1.09485C1.99928 0.949552 1.79832 0.877068 1.56074 0.877068L1.06113 1.3183C0.896899 1.46337 0.814758 1.64093 0.814758 1.85073C0.814758 2.06054 0.896899 2.23801 1.06113 2.38331L5.39712 6.21974C5.56142 6.36491 5.76235 6.4375 5.99995 6.4375C6.23756 6.4375 6.43833 6.36493 6.6027 6.21974L10.9387 2.38333C11.103 2.23803 11.1851 2.06058 11.1851 1.85075C11.1851 1.64093 11.103 1.46339 10.9387 1.31832C10.7745 1.17302 10.5747 1.10054 10.3392 1.10054C10.1039 1.10054 9.90188 1.17304 9.73317 1.31832L5.99994 4.31186Z' fill='%23555E61'/%3E%3C/svg%3E%0A");
+      background-size: cover;
+      content: '';
+    }
+  }
+
+  &__hide {
+    &::after {
+      position: absolute;
+      top: 2px;
+      right: -16px;
+      width: 12px;
+      height: 7px;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.99994 4.31186L2.16358 1.09485C1.99928 0.949552 1.79832 0.877068 1.56074 0.877068L1.06113 1.3183C0.896899 1.46337 0.814758 1.64093 0.814758 1.85073C0.814758 2.06054 0.896899 2.23801 1.06113 2.38331L5.39712 6.21974C5.56142 6.36491 5.76235 6.4375 5.99995 6.4375C6.23756 6.4375 6.43833 6.36493 6.6027 6.21974L10.9387 2.38333C11.103 2.23803 11.1851 2.06058 11.1851 1.85075C11.1851 1.64093 11.103 1.46339 10.9387 1.31832C10.7745 1.17302 10.5747 1.10054 10.3392 1.10054C10.1039 1.10054 9.90188 1.17304 9.73317 1.31832L5.99994 4.31186Z' fill='%23555E61'/%3E%3C/svg%3E%0A");
+      background-size: cover;
+      content: '';
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 150px;
+    padding-right: 78px;
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 140px;
+      padding-right: 11px;
+    }
+  }
+
+  &__score {
+    position: relative;
+    color: #00141E;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    opacity: 0.4;
+
+    span {
+      position: absolute;
+      top: 0.4em;
+      font-size: 75%;
+      line-height: 0;
+      vertical-align: baseline;
+    }
+  }
+
+  &__scores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+
+    &:first-child {
+      .table__score {
+        opacity: 1;
+      }
+    }
+  }
+
 
   &__main {
     display: flex;
@@ -165,15 +240,6 @@
       flex-direction: column;
       gap: 0;
     }
-  }
-
-  &__score {
-    display: block;
-    color: $color-main;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 18px;
-    text-align: center;
   }
 
   &__result {
@@ -239,8 +305,8 @@
 
     &--mod .table__info {
       @media (max-width: $breakpoint-mobile) {
-        justify-content: end;
-        width: auto;
+        width: 140px;
+        padding-right: 0;
       }
     }
 
