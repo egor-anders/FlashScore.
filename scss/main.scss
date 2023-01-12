@@ -1,6 +1,7 @@
 @import 'vendor/normalize.scss';
 @import 'variables.scss';
 @import 'sections/aside.scss';
+@import 'sections/content.scss';
 
 
 @font-face {
@@ -71,6 +72,7 @@ html {
 }
 
 .container {
+  display: flex;
   box-sizing: border-box;
   width: $container-desk;
   margin-right: auto;
