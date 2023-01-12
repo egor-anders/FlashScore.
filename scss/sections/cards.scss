@@ -1,0 +1,106 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: calc(134px + 24px);
+  width: 100%;
+  column-gap: 35px;
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 310px;
+    padding: 106px 25px 21px;
+    background-color: var(--color-card-bg);
+    border-radius: 16px;
+    box-shadow: 0 14px 54px rgb(0 0 0 / 3%);
+  }
+
+  &__picture {
+    position: absolute;
+    top: -134px;
+    left: 11px;
+    width: 288px;
+    height: 220px;
+    border-radius: 16px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    color: var(--color-main);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &__star-button {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+
+  &__reactions {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+
+  &__rate {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-left: 5px;
+    color: #000000;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__reviews {
+    margin-left: auto;
+    color: #8C8D9A;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+
+  &__button {
+    width: 123px;
+    padding: 16px 30px;
+    color: var(--color-button-text);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    background: var(--color-button-bg);
+    border: none;
+    border-radius: 31px;
+    outline: none;
+    cursor: pointer;
+
+    &--second {
+      color: var(--color-button-second-text);
+      background: var(--color-button-second-bg);
+    }
+  }
+
+  &__descr {
+    color: var(--color-card-descr);
+    font-weight: 400;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    line-height: 15px;
+  }
+}

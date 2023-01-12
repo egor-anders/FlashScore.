@@ -2,6 +2,7 @@
 @import 'variables.scss';
 @import 'sections/aside.scss';
 @import 'sections/content.scss';
+@import 'sections/cards.scss';
 
 
 @font-face {
@@ -47,8 +48,10 @@
   --color-icon-bg: #F5F5F5;
   --color-card-bg: #FFFFFF;
   --color-button-bg: #39C948;
+  --color-see-all: #55C960;
   --color-button-text: #FFFFFF;
   --color-button-second-bg: #EAF8EC;
+  --color-card-descr: #8C8D9A;
   --color-button-second-text: #39C948;
   --color-notification-bg: #FFFFFF;
   --color-notification-info-bg: #FB6B63;

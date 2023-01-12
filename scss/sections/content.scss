@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    margin-bottom: 33px;
     padding: 18px 20px;
     background: #FFFFFF;
     border-radius: 31px;
@@ -23,6 +24,131 @@
       &::placeholder {
         color: #A1A2AF;
       }
+    }
+  }
+
+  &__discover {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 44px;
+    padding: 30px 44px;
+    background-image: url('/assets/icons/bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h2 {
+      margin-bottom: 10px;
+      color: var(--color-discover);
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    button {
+      padding: 14px 18px;
+      color: var(--color-discover);
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 14px;
+      background: var(--color-main);
+      border: none;
+      border-radius: 101px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 383px;
+      height: 219px;
+      background-image: url('/assets/img/discover-decor.png');
+      background-size: cover;
+      content: '';
+    }
+  }
+
+  &__filter {
+    margin-bottom: 158px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    h3 {
+      color: var(--color-main);
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 31px;
+    }
+
+    a {
+      color: var(--color-see-all);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      text-decoration: none;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-sizing: border-box;
+    padding: 6px 8px;
+    color: var(--color-main);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: capitalize;
+    background-color: var(--color-card-bg);
+    border-radius: 45px;
+    cursor: pointer;
+
+    &--fire {
+      width: 132px;
+    }
+
+    &--art {
+      width: 104px;
+    }
+
+    &--game {
+      width: 111px;
+    }
+
+    &--fashion {
+      width: 123px;
+    }
+
+    &--music {
+      width: 112px;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 43px;
+    height: 43px;
+    background-color: var(--color-icon-bg);
+    border-radius: 50%;
+
+    img {
+      width: 26px;
+      height: 24px;
     }
   }
 }
