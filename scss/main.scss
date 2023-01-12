@@ -1,5 +1,6 @@
 @import 'vendor/normalize.scss';
 @import 'variables.scss';
+@import 'sections/aside.scss';
 
 
 @font-face {
@@ -37,7 +38,7 @@
   --bg-color-main: #F9F9F9;
   --bg-color-aside: #FFFFFF;
   --aside-title-color: #1E1E2D;
-  --aside-number-bg: #E6E6E6;
+  --aside-counter-bg: #E6E6E6;
   --aside-login-color: #353542;
   --aside-logout-color: #FB6B63;
   --color-main: #1E1E2D;
@@ -75,7 +76,6 @@ html {
   margin-right: auto;
   margin-left: auto;
   background: var(--bg-color-main);
-  padding-top: 50px;
 }
 
 
