@@ -3,6 +3,7 @@
 @import 'sections/aside.scss';
 @import 'sections/content.scss';
 @import 'sections/cards.scss';
+@import 'sections/info.scss';
 
 
 @font-face {
@@ -58,6 +59,8 @@
   --color-popup-bg: #FFFFFF;
   --color-login-icon-bg: #F5F5F5;
   --color-menu-hover: #E1E1E1;
+  --color-theme-button: #FDB600;
+  --color-panel: #1E1E2D;
 }
 
 body {
