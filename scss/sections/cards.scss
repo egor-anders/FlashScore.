@@ -3,7 +3,9 @@
   flex-wrap: wrap;
   row-gap: calc(134px + 24px);
   width: 100%;
+  padding-top: 134px;
   column-gap: 35px;
+
 
   &__card {
     position: relative;

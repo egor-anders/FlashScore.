@@ -1,11 +1,18 @@
 .aside {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   width: 274px;
+  height: 100vh;
   padding: 67px 26px 53px;
   background-color: var(--bg-color-aside);
 
   &__container {
     padding-left: 24px;
+
+    &--login {
+      margin-top: auto;
+    }
   }
 
   &__logo {
@@ -29,7 +36,7 @@
 
     &--second {
       gap: 36px;
-      margin-bottom: 234px;
+      margin-bottom: 20px;
     }
   }
 
@@ -78,6 +85,7 @@
     display: flex;
     align-items: center;
     gap: 18px;
+    margin-top: auto;
     cursor: pointer;
 
     span {
@@ -94,4 +102,10 @@
   margin-top: 62px;
   margin-bottom: 52px;
   background: #F2F2F2;
+}
+
+
+.wrapper {
+  min-height: 100vh;
+  background-color: var(--bg-color-aside);
 }

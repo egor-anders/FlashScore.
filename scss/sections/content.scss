@@ -27,6 +27,18 @@
     }
   }
 
+  &__cards {
+    height: 533px;
+    padding-bottom: 53px;
+    overflow-y: auto;
+    -ms-overflow-style: none;  /* IE и Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
   &__discover {
     position: relative;
     box-sizing: border-box;
@@ -71,7 +83,7 @@
   }
 
   &__filter {
-    margin-bottom: 158px;
+    margin-bottom: 24px;
   }
 
   &__info {
