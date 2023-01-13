@@ -7,6 +7,7 @@
   &__panel {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 33px;
   }
 
   &__themes {
@@ -114,5 +115,133 @@
     top: 20px;
     right: 15px;
     color: var(--color-main);
+  }
+
+  &__balance {
+    display: none;
+    width: 100%;
+    height: 288px;
+    margin-bottom: 23px;
+    border-radius: 16px;
+    box-shadow: 0 14px 54px rgb(0 0 0 / 3%);
+
+
+    &--active {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+    }
+  }
+
+  &__subscriptions {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px 15px 20px;
+    background: var(--color-card-bg);
+    border-radius: 16px;
+    box-shadow: 0 14px 54px rgb(0 0 0 / 3%);
+  }
+
+  &__headers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    padding: 0 15px;
+
+    h3 {
+      color: var(--color-main);
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    a {
+      color: var(--color-see-all);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  &__creators {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__creator {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 18px;
+
+    &--active {
+      box-shadow: 0 14px 54px rgb(0 0 0 / 3%);
+    }
+  }
+
+  &__icon {
+    width: 54px;
+    height: auto;
+    margin-right: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    h4 {
+      color: var(--color-main);
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    span {
+      color: #A1A2AF;
+      font-weight: 400;
+      font-size: 10px;
+      font-family: 'SFCompactDisplay', sans-serif;
+      line-height: 12px;
+    }
+  }
+
+  &__button {
+    width: 90px;
+    margin-left: auto;
+    padding: 14px 0;
+    color: var(--color-main);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    background-color: var(--color-card-bg);
+    border: 1px solid #EFEFEF;
+    border-radius: 101px;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-card-bg);
+      background-color: var(--color-main);
+      border: none;
+    }
+
+    &--active {
+      color: var(--color-card-bg);
+      background-color: var(--color-main);
+      border: none;
+    }
   }
 }
