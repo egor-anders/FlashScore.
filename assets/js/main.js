@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const cardRatings = document.querySelectorAll('.cards__ratings');
-
   cardRatings.forEach((item) => {
     const starButton = item.querySelector('.cards__star-button');
     const starsWrapper = item.querySelector('.rating');
@@ -38,16 +37,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const starsArr = starsWrapper.querySelectorAll('.rating__item');
     console.log(starsArr);
 
-
     starButton.addEventListener('click', () => {
-      starsWrapper.setAttribute('data-total-value', 0);
-    });
+      if (starsWrapper.classList.contains('rating--active')) {
+        starsWrapper.setAttribute('data-total-value', 0);
+      }
 
+      starsWrapper.classList.toggle('rating--active');
+
+    });
 
     starsArr.forEach((star) => {
       star.addEventListener('click', () => {
         console.log(item.getAttribute('data-item-value'));
         star.parentNode.dataset.totalValue = star.dataset.itemValue;
+        starsWrapper.classList.toggle('rating--active');
       });
     });
   });

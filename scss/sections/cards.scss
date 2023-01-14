@@ -117,7 +117,13 @@
 .rating {
   display: inline-flex;
   flex-direction: row-reverse;
-  width: 72px;
+  max-width: 0;
+  transition: all 0.3s;
+
+  &--active {
+    max-width: 72px;
+    opacity: 1;
+  }
 
   &__item {
     width: 18px;
