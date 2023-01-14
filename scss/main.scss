@@ -63,6 +63,9 @@
   --color-panel: #1E1E2D;
   --color-creator-bg: #FBFBFB;
   --color-creator-active: #FFFFFF;
+  --color-border-second: #FFFFFF;
+  --color-login-text: #1E1E2D;
+  --color-separator: #F2F2F2;
 }
 
 body {
@@ -77,6 +80,36 @@ body {
 
 html {
   overflow-x: hidden;
+}
+
+.dark-mode {
+  --bg-color-main: #1E1E2D;
+  --bg-color-aside: #161622;
+  --aside-title-color: #FFFFFF;
+  --aside-counter-bg: #2D2D38;
+  --aside-login-color: #A1A2AF;
+  --aside-logout-color: #FB493F;
+  --color-main: #FFFFFF;
+  --color-discover: #1E1E2D;
+  --color-icon-bg: #1E1E2D;
+  --color-card-bg: #161622;
+  --color-button-bg: #FFFFFF;
+  --color-see-all: #38C947;
+  --color-button-text: #1E1E2D;
+  --color-button-second-bg: #161622;
+  --color-card-descr: #A1A2AF;
+  --color-button-second-text: #FFFFFF;
+  --color-notification-bg: #161622;
+  --color-notification-info-bg: #A41412;
+  --color-popup-bg: #2A2A39;
+  --color-login-icon-bg: #2A2A36;
+  --color-menu-hover: #2A2A39;
+  --color-theme-button: #FFFFFF;
+  --color-panel: #858693;
+  --color-creator-bg: #161622;
+  --color-border-second: #373741;
+  --color-login-text: #FFFFFF;
+  --color-separator: #2D2D3E;
 }
 
 .container {

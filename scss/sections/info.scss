@@ -32,12 +32,14 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    min-width: 170px;
     padding: 18px 24px;
     color: var(--color-main);
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     border-radius: 31px;
+    cursor: pointer;
 
     &--active {
       color: var(--color-card-bg);
@@ -178,9 +180,9 @@
     position: relative;
     display: flex;
     align-items: center;
-    gap: 9px;
+    gap: 5px;
     box-sizing: border-box;
-    width: 140px;
+    min-width: 140px;
     height: 60px;
     padding: 10px;
     background-color: var(--color-card-bg);
@@ -190,7 +192,7 @@
     user-select: none;
 
     span {
-      color: var(--color-panel);
+      color: var(--color-login-text);
       font-weight: 500;
       font-size: 14px;
       line-height: 16px;
@@ -208,13 +210,20 @@
   }
 
   &__avatar {
+    position: relative;
     width: 40px;
     height: 40px;
-    color: var(--color-login-icon-bg);
+    overflow: hidden;
+    background-color: var(--color-login-icon-bg);
+    border-radius: 100%;
 
     svg {
-      width: 100%;
-      height: 100%;
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      width: 36px;
+      height: 36px;
+      transform: translateX(-50%);
     }
 
     img {
@@ -240,7 +249,6 @@
     img {
       width: 100%;
       height: 100%;
-      border-radius: 16px;
     }
   }
 

@@ -54,4 +54,27 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  //dark-mode
+
+  const darkButton = document.querySelector('.info__theme--dark');
+  const lightButton = document.querySelector('.info__theme--light');
+
+  darkButton.addEventListener('click', ()=> {
+    darkButton.classList.add('info__theme--active');
+    lightButton.classList.remove('info__theme--active');
+    document.body.classList.add('dark-mode');
+    document.querySelector('.content__discover').classList.add('content__discover--dark');
+    document.querySelector('.info__balance--light').classList.remove('info__balance--active');
+    document.querySelector('.info__balance--dark').classList.add('info__balance--active');
+  });
+
+  lightButton.addEventListener('click', ()=> {
+    darkButton.classList.remove('info__theme--active');
+    lightButton.classList.add('info__theme--active');
+    document.body.classList.remove('dark-mode');
+    document.querySelector('.content__discover').classList.remove('content__discover--dark');
+    document.querySelector('.info__balance--light').classList.add('info__balance--active');
+    document.querySelector('.info__balance--dark').classList.remove('info__balance--active');
+  });
 });

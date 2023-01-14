@@ -58,7 +58,7 @@
     align-items: flex-start;
     gap: 8px;
     margin-left: 5px;
-    color: #000000;
+    color: var(--color-main);
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
@@ -93,8 +93,10 @@
     cursor: pointer;
 
     &--second {
+      padding: 16px 29px;
       color: var(--color-button-second-text);
       background: var(--color-button-second-bg);
+      border: 1px solid var(--color-border-second);
     }
   }
 

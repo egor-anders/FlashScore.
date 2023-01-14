@@ -72,7 +72,7 @@
     align-items: center;
     width: 26px;
     height: 26px;
-    color: #1E1E2D;
+    color: var(--color-main);
     font-weight: 600;
     font-size: 10px;
     line-height: 12px;
@@ -88,6 +88,14 @@
     margin-top: auto;
     cursor: pointer;
 
+    &--login {
+      color: var(--aside-login-color);
+    }
+
+    &--logout {
+      color: var(--aside-logout-color);
+    }
+
     span {
       font-weight: 500;
       font-size: 18px;
@@ -101,7 +109,7 @@
   height: 1px;
   margin-top: 62px;
   margin-bottom: 52px;
-  background: #F2F2F2;
+  background: var(--color-separator);
 }
 
 
