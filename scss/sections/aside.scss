@@ -7,8 +7,18 @@
   padding: 67px 26px 53px;
   background-color: var(--bg-color-aside);
 
+  @media (max-width: $container-desk) {
+    width: 261px;
+    padding: 67px 26px 53px 13px;
+  }
+
+
   &__container {
-    padding-left: 24px;
+    padding-left: 23px;
+
+    @media (max-width: $container-desk) {
+      padding-left: 23px;
+    }
 
     &--login {
       margin-top: auto;
@@ -114,6 +124,11 @@
 
 
 .wrapper {
+  width: fit-content;
   min-height: 100vh;
   background-color: var(--bg-color-aside);
+
+  @media (max-width: $container-laptop) {
+    display: none;
+  }
 }

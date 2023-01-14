@@ -4,11 +4,21 @@
   width: 354px;
   padding-top: 50px;
 
+  @media (max-width: $container-laptop) {
+    width: 100%;
+    padding-top: 44px;
+    padding-bottom: 30px;
+  }
+
   &__panel {
     position: relative;
     display: flex;
     justify-content: space-between;
     margin-bottom: 33px;
+
+    @media (max-width: $container-laptop) {
+      display: none;
+    }
   }
 
   &__login-popup {
@@ -57,6 +67,13 @@
     background: var(--color-card-bg);
     border-radius: 31px;
     box-shadow: 0 18px 54px rgb(0 0 0 / 2%);
+
+
+    @media (max-width: $container-laptop) {
+      width: 66px;
+      height: 36px;
+      padding: 3px;
+    }
   }
 
   &__theme {
@@ -67,6 +84,16 @@
     height: 46px;
     color: #A1A2AF;
     cursor: pointer;
+
+    @media (max-width: $container-laptop) {
+      width: 30px;
+      height: 30px;
+
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+    }
 
 
     &--active {
@@ -240,6 +267,13 @@
     margin-bottom: 23px;
     border-radius: 16px;
     box-shadow: 0 14px 54px rgb(0 0 0 / 3%);
+
+    @media (max-width: $container-laptop) {
+      width: fit-content;
+      height: 370px;
+      margin: 0 auto;
+      margin-bottom: 23px;
+    }
 
 
     &--active {

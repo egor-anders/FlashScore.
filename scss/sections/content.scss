@@ -2,6 +2,15 @@
   width: 655px;
   padding: 50px 40px 0 67px;
 
+  @media (max-width: $container-desk) {
+    padding: 50px 40px 0;
+  }
+
+  @media (max-width: $container-laptop) {
+    width: 100%;
+    padding: 30px 0 0;
+  }
+
   &__search {
     display: flex;
     align-items: center;
@@ -38,6 +47,11 @@
     &::-webkit-scrollbar {
       display: none;
     }
+
+    @media (max-width: $container-laptop) {
+      height: auto;
+      padding-bottom: 0;
+    }
   }
 
   &__discover {
@@ -49,6 +63,7 @@
     background-image: url('/assets/icons/bg.svg');
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 18px;
 
     &--dark {
       background-image: url('/assets/icons/bg-dark.svg');
@@ -115,7 +130,21 @@
 
   &__tags {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+
+    @media (max-width: $container-laptop) {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      gap: 8px;
+      overflow-x: auto;
+      -ms-overflow-style: none;  /* IE и Edge */
+      scrollbar-width: none;  /* Firefox */
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
 
   &__tag {

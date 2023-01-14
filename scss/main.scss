@@ -4,6 +4,7 @@
 @import 'sections/content.scss';
 @import 'sections/cards.scss';
 @import 'sections/info.scss';
+@import 'sections/mobile.scss';
 
 
 @font-face {
@@ -120,6 +121,17 @@ html {
   margin-left: auto;
   padding: 0 50px 0 0;
   background: var(--bg-color-main);
+
+  @media (max-width: $container-desk) {
+    width: 100%;
+    padding: 0 13px 0 0;
+  }
+
+  @media (max-width: $container-laptop) {
+    flex-direction: column;
+    width: calc(655px + 20px + 20px);
+    padding: 0 20px;
+  }
 }
 
 

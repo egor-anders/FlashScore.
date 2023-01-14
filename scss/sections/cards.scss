@@ -6,6 +6,12 @@
   padding-top: 134px;
   column-gap: 35px;
 
+  @media (max-width: $container-laptop) {
+    width: 655px;
+    margin: 0 auto;
+    column-gap: 35px;
+  }
+
 
   &__card {
     position: relative;
