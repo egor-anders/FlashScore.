@@ -94,4 +94,48 @@
       height: 100%;
     }
   }
+
+  &__nav {
+    display: none;
+    padding: 18px 0;
+    background-color: var(--color-card-bg);
+
+    @media (max-width: $container-laptop) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 42px;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  &__item {
+    color: #6F7181;
+    cursor: pointer;
+
+    svg {
+      width: 36px;
+      height: 36px;
+
+
+      @media (max-width: $container-tablet) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &:hover {
+      color: var(--aside-title-color);
+    }
+
+    &--active {
+      color: var(--aside-title-color);
+    }
+  }
 }

@@ -21,6 +21,11 @@
     border-radius: 31px;
     box-shadow: 0 18px 54px rgb(0 0 0 / 2%);
 
+    @media (max-width: $container-tablet) {
+      margin-bottom: 40px;
+      padding: 14px 20px;
+    }
+
     input {
       width: 100%;
       color: #A1A2AF;
@@ -30,6 +35,11 @@
       background: transparent;
       border: none;
       outline: none;
+
+      @media (max-width: $container-tablet) {
+        font-size: 14px;
+        line-height: 16px;
+      }
 
       &::placeholder {
         color: #A1A2AF;
@@ -65,6 +75,15 @@
     background-size: cover;
     border-radius: 18px;
 
+    @media (max-width: $container-tablet) {
+      margin-bottom: 32px;
+      padding: 25px 20px;
+    }
+
+    @media (max-width: 660px) {
+      background-size: auto;
+    }
+
     &--dark {
       background-image: url('/assets/icons/bg-dark.svg');
     }
@@ -75,9 +94,16 @@
       font-weight: 700;
       font-size: 28px;
       line-height: 36px;
+
+      @media (max-width: $container-tablet) {
+        margin-bottom: 12px;
+        font-size: 20px;
+        line-height: 120%;
+      }
     }
 
-    button {
+    a {
+      display: inline-block;
       padding: 14px 18px;
       color: var(--color-discover);
       font-weight: 600;
@@ -88,6 +114,10 @@
       border-radius: 101px;
       outline: none;
       cursor: pointer;
+
+      @media (max-width: $container-tablet) {
+        padding: 10px 15px;
+      }
     }
 
     &::after {
@@ -99,6 +129,13 @@
       background-image: url('/assets/img/discover-decor.png');
       background-size: cover;
       content: '';
+
+      @media (max-width: $container-tablet) {
+        width: 187px;
+        height: 168px;
+        background-image: url('/assets/img/discover-decor-mobile.png');
+        border-bottom-right-radius: 18px;
+      }
     }
   }
 
@@ -112,11 +149,21 @@
     align-items: center;
     margin-bottom: 20px;
 
+    @media (max-width: $container-tablet) {
+      margin-bottom: 16px;
+    }
+
     h3 {
       color: var(--color-main);
       font-weight: 700;
       font-size: 26px;
       line-height: 31px;
+
+
+      @media (max-width: $container-tablet) {
+        font-size: 20px;
+        line-height: 24px;
+      }
     }
 
     a {
@@ -125,6 +172,11 @@
       font-size: 16px;
       line-height: 19px;
       text-decoration: none;
+
+      @media (max-width: $container-tablet) {
+        font-size: 16px;
+        line-height: 19px;
+      }
     }
   }
 
@@ -145,6 +197,13 @@
         display: none;
       }
     }
+
+    @media (max-width: $container-tablet) {
+      position: relative;
+      right: -9px;
+      justify-content: baseline;
+      margin-left: -9px;
+    }
   }
 
   &__tag {
@@ -163,23 +222,23 @@
     cursor: pointer;
 
     &--fire {
-      width: 132px;
+      min-width: 132px;
     }
 
     &--art {
-      width: 104px;
+      min-width: 104px;
     }
 
     &--game {
-      width: 111px;
+      min-width: 111px;
     }
 
     &--fashion {
-      width: 123px;
+      min-width: 123px;
     }
 
     &--music {
-      width: 112px;
+      min-width: 112px;
     }
   }
 

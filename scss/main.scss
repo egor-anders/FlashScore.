@@ -132,6 +132,11 @@ html {
     width: calc(655px + 20px + 20px);
     padding: 0 20px;
   }
+
+  @media (max-width: $container-tablet) {
+    width: 100%;
+    padding: 0 10px;
+  }
 }
 
 

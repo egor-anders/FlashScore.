@@ -12,6 +12,12 @@
     column-gap: 35px;
   }
 
+  @media (max-width: $container-tablet) {
+    flex-direction: column;
+    row-gap: calc(134px + 16px);
+    width: 100%;
+  }
+
 
   &__card {
     position: relative;
@@ -23,6 +29,12 @@
     background-color: var(--color-card-bg);
     border-radius: 16px;
     box-shadow: 0 14px 54px rgb(0 0 0 / 3%);
+
+    @media (max-width: $container-tablet) {
+      width: 300px;
+      margin: 0 auto;
+      padding: 106px 20px 21px;
+    }
   }
 
   &__picture {
