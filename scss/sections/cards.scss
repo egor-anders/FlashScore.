@@ -45,6 +45,10 @@
     height: 220px;
     border-radius: 16px;
 
+    @media (max-width: $container-tablet) {
+      width: 278px;
+    }
+
     img {
       width: 100%;
       height: 100%;

@@ -51,25 +51,26 @@
   }
 
   &__item {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    color: #6F7181;
-    cursor: pointer;
-
-    &:hover {
-      color: var(--aside-title-color);
-    }
-
-    span {
+    a {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      color: #6F7181;
       font-weight: 500;
       font-size: 20px;
       line-height: 24px;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--aside-title-color);
+      }
     }
 
     &--active {
-      color: var(--aside-title-color);
+      a {
+        color: var(--aside-title-color);
+      }
     }
   }
 

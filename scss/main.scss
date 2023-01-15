@@ -5,6 +5,7 @@
 @import 'sections/cards.scss';
 @import 'sections/info.scss';
 @import 'sections/mobile.scss';
+@import 'sections/popup.scss';
 
 
 @font-face {
@@ -67,6 +68,7 @@
   --color-border-second: #FFFFFF;
   --color-login-text: #1E1E2D;
   --color-separator: #F2F2F2;
+  --color-separator-not: #E1E1E1;
 }
 
 body {
@@ -76,11 +78,19 @@ body {
   font-weight: 400;
   font-family: 'Gilroy', sans-serif;
   background: var(--bg-color-main);
+
+  @media (max-width: $container-laptop) {
+    position: relative;
+  }
 }
 
 
 html {
   overflow-x: hidden;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .dark-mode {
@@ -111,6 +121,7 @@ html {
   --color-border-second: #373741;
   --color-login-text: #FFFFFF;
   --color-separator: #2D2D3E;
+  --color-separator-not: #60606D;
 }
 
 .container {
