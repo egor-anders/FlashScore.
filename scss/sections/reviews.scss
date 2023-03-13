@@ -90,6 +90,10 @@
     background: var(--color-card-bg);
     border-radius: 16px;
     box-shadow: 0 14px 54px rgb(0 0 0 / 3%);
+
+    &--hide {
+      display: none;
+    }
   }
 
   &__header {
@@ -146,7 +150,7 @@
     line-height: 140%;
   }
 
-  &__more {
+  &__more, &__hide {
     width: auto;
     margin: 0 auto;
     padding: 12px 32px;
@@ -156,5 +160,9 @@
       padding: 12px 0;
       text-align: center;
     }
+  }
+
+  &__hide {
+    display: none;
   }
 }
