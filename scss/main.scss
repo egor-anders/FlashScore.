@@ -6,6 +6,9 @@
 @import 'sections/info.scss';
 @import 'sections/mobile.scss';
 @import 'sections/popup.scss';
+@import 'sections/product.scss';
+@import 'sections/reviews.scss';
+@import 'sections/modal.scss';
 
 
 @font-face {
@@ -30,6 +33,12 @@
   font-weight: 400;
   font-family: 'Inter';
   src: url('../../assets/fonts/Inter-Regular.woff2');
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: 'Inter';
+  src: url('../../assets/fonts/Inter-SemiBold.ttf');
 }
 
 @font-face {
@@ -69,6 +78,11 @@
   --color-login-text: #1E1E2D;
   --color-separator: #F2F2F2;
   --color-separator-not: #E1E1E1;
+  --color-product-descr: #FAFAFA;
+  --color-product-text: #474753;
+  --color-product-content: #3C3D4A;
+  --color-input-text: #3C3D4A;
+  --color-input-bg: #F8F8F8;
 }
 
 body {
@@ -122,6 +136,11 @@ html {
   --color-login-text: #FFFFFF;
   --color-separator: #2D2D3E;
   --color-separator-not: #60606D;
+  --color-product-descr: #20202C;
+  --color-product-text: #A1A2AF;
+  --color-product-content: #A1A2AF;
+  --color-input-text: #FFFFFF;
+  --color-input-bg: #161622;
 }
 
 .container {

@@ -30,6 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  document.querySelector('#mobilePanel').addEventListener('click', (e) => {
+    e.preventDefault();
+    popupMain.classList.add('popup--active');
+    document.querySelector('html').classList.add('no-scroll');
+  });
+
   const cardRatings = document.querySelectorAll('.cards__ratings');
   cardRatings.forEach((item) => {
     const starButton = item.querySelector('.cards__star-button');
@@ -41,13 +47,17 @@ document.addEventListener('DOMContentLoaded', () => {
         starsWrapper.setAttribute('data-total-value', 0);
       }
 
-      starsWrapper.classList.toggle('rating--active');
+      if (!starButton.classList.contains('cards__star-button--modal')) {
+        starsWrapper.classList.toggle('rating--active');
+      }
     });
 
     starsArr.forEach((star) => {
       star.addEventListener('click', () => {
         star.parentNode.dataset.totalValue = star.dataset.itemValue;
-        starsWrapper.classList.toggle('rating--active');
+        if (!starsWrapper.classList.contains('rating--modal')) {
+          starsWrapper.classList.toggle('rating--active');
+        }
       });
     });
   });
@@ -104,8 +114,14 @@ const enableDarkMode = () => {
   darkButtonMobile.classList.add('mobile__theme--active');
   lightButtonMobile.classList.remove('mobile__theme--active');
   document.body.classList.add('dark-mode');
-  document.querySelector('.content__discover').classList.add('content__discover--dark');
+
+  try {
+    document.querySelector('.content__discover').classList.add('content__discover--dark');
+  } catch {}
   document.querySelector('.info__balance--light').classList.remove('info__balance--active');
+  document.querySelectorAll('.modal__close').forEach((close) => {
+    close.classList.add('modal__close--dark');
+  });
   document.querySelector('.info__balance--dark').classList.add('info__balance--active');
   localStorage.setItem('dark-mode', 'enabled');
 };
@@ -116,9 +132,15 @@ const disableDarkMode = () => {
   darkButtonMobile.classList.remove('mobile__theme--active');
   lightButtonMobile.classList.add('mobile__theme--active');
   document.body.classList.remove('dark-mode');
-  document.querySelector('.content__discover').classList.remove('content__discover--dark');
+  try {
+    document.querySelector('.content__discover').classList.remove('content__discover--dark');
+  } catch {
+  }
   document.querySelector('.info__balance--light').classList.add('info__balance--active');
   document.querySelector('.info__balance--dark').classList.remove('info__balance--active');
+  document.querySelectorAll('.modal__close').forEach((close) => {
+    close.classList.remove('modal__close--dark');
+  });
   localStorage.setItem('dark-mode', 'disabled');
 };
 
@@ -140,9 +162,15 @@ const enableDarkModeMobile = () => {
   darkButtonMobile.classList.add('mobile__theme--active');
   lightButtonMobile.classList.remove('mobile__theme--active');
   document.body.classList.add('dark-mode');
-  document.querySelector('.content__discover').classList.add('content__discover--dark');
+  try {
+    document.querySelector('.content__discover').classList.add('content__discover--dark');
+  } catch {
+  }
   document.querySelector('.info__balance--light').classList.remove('info__balance--active');
   document.querySelector('.info__balance--dark').classList.add('info__balance--active');
+  document.querySelectorAll('.modal__close').forEach((close) => {
+    close.classList.add('modal__close--dark');
+  });
   localStorage.setItem('dark-mode', 'enabled');
 };
 
@@ -152,9 +180,16 @@ const disableDarkModeMobile = () => {
   darkButtonMobile.classList.remove('mobile__theme--active');
   lightButtonMobile.classList.add('mobile__theme--active');
   document.body.classList.remove('dark-mode');
-  document.querySelector('.content__discover').classList.remove('content__discover--dark');
+
+  try {
+    document.querySelector('.content__discover').classList.remove('content__discover--dark');
+  } catch {
+  }
   document.querySelector('.info__balance--light').classList.add('info__balance--active');
   document.querySelector('.info__balance--dark').classList.remove('info__balance--active');
+  document.querySelectorAll('.modal__close').forEach((close) => {
+    close.classList.remove('modal__close--dark');
+  });
   localStorage.setItem('dark-mode', 'disabled');
 };
 
