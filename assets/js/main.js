@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   togglePopup('info__notifications', 'info__notification-popup');
   togglePopup('info__login', 'info__login-popup');
   togglePopup('popup__button', 'popup__menu');
+  togglePopup('popup__button-custom', 'popup__menu-custom');
 
   function togglePopup(buttonClass, popupClass) {
     const buttonSelector = document.querySelector('.' + buttonClass);
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelector('#mobilePanel').addEventListener('click', (e) => {
     e.preventDefault();
-    popupMain.classList.add('popup--active');
+    popupCustom.classList.add('popup--active');
     document.querySelector('html').classList.add('no-scroll');
   });
 
@@ -65,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const popupMainButton = document.querySelector('.mobile__user-button');
   const popups = document.querySelectorAll('.popup');
   const popupMain = document.querySelector('.popup--main');
+  const popupCustom = document.querySelector('.popup--custom');
 
   popupMainButton.addEventListener('click', () => {
     popupMain.classList.add('popup--active');
@@ -72,12 +74,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   try {
-    const popupNotificationsButton = document.querySelector('.popup__notifications');
+    const popupNotificationsButtons= document.querySelectorAll('.popup__notifications');
     const popupNotifications = document.querySelector('.popup--notifications');
 
-    popupNotificationsButton.addEventListener('click', () => {
-      popupNotifications.classList.add('popup--active');
-      document.querySelector('html').classList.add('no-scroll');
+    popupNotificationsButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        popupNotifications.classList.add('popup--active');
+        document.querySelector('html').classList.add('no-scroll');
+      });
     });
   } catch {
     console.log('its a guest');
@@ -87,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cross = popup.querySelector('.popup__cross');
     cross.addEventListener('click', () => {
       popup.classList.remove('popup--active');
-      if (!popupMain.classList.contains('popup--active')) {
+      if (!popupMain.classList.contains('popup--active') && !popupCustom.classList.contains('popup--active')) {
         document.querySelector('html').classList.remove('no-scroll');
       }
     });

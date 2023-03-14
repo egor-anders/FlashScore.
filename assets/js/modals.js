@@ -31,7 +31,17 @@ triggers.forEach((trigger) => {
   trigger.addEventListener('click', (e) => {
     e.preventDefault();
     if (trigger.getAttribute('data-toggle') == 'review') {
-      document.querySelector('.modal--review').classList.add('modal--active');
+      if (!document.body.classList.contains('guest')) {
+        document.querySelector('.modal--review').classList.add('modal--active');
+      } else {
+        document.querySelector('.modal--login').classList.add('modal--active');
+        document.querySelector('.modal-error').classList.add('modal-error--show');
+        
+        // время исчезновения модального окна с ошибкой
+        setTimeout(function () {
+          document.querySelector('.modal-error').classList.remove('modal-error--show');
+        }, 4000); 
+      }
       document.querySelector('html').classList.add('no-scroll');
     } else if (trigger.getAttribute('data-toggle') == 'login') {
       document.querySelector('.modal--login').classList.add('modal--active');

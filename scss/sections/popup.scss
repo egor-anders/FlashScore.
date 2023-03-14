@@ -107,7 +107,7 @@
     box-shadow: 0 14px 54px rgb(0 0 0 / 3%);
   }
 
-  &__button {
+  &__button, &__button-custom {
     position: relative;
     display: flex;
     align-items: center;
@@ -135,6 +135,11 @@
       background-color: var(--color-menu-hover);
 
       .info__arrow {
+        top: 23px;
+        transform: rotateZ(180deg);
+      }
+
+      .popup__arrow {
         top: 23px;
         transform: rotateZ(180deg);
       }
@@ -173,7 +178,7 @@
   }
 
 
-  &__menu {
+  &__menu, &__menu-custom {
     position: absolute;
     right: 0;
     bottom: -150px;
