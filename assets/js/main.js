@@ -25,6 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    if(popupSelector){
+      popupSelector.classList.remove(buttonClass + '--active');
+      }
+
     $(window).scroll(function () {
       popupSelector.classList.remove(buttonClass + '--active');
       buttonSelector.classList.remove(popupClass + '--active');
